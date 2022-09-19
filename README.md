@@ -1,3 +1,23 @@
+## Projeto Market List - Sistemas distribuidos
+
+É uma lista de compras podendo separar itens conforme os setores do mercado, futuramente pode ser desenvolvido lembretes conforme o tempo que foi comprado o item assim lembrando que está na hora de repor os produtos.
+
+para este projeto esta sendo utlizado frameworks:
+
+* Next.js
+* Node
+* Hospedagem da aplicação na Vercel
+* Orm prisma
+* Banco de dados Postgresql hospedagem no ElephantSQL
+* Prototipos Figma
+* gerenciador yarn
+
+
+
+
+
+## Next.js
+
 This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
 ## Getting Started

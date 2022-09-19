@@ -1,8 +1,8 @@
 export default function about() {
   return (
     <div>
-        <h1>about....</h1>
-        <h2>teste</h2>
+        <h1>App Market List</h1>
+        <h3>Em desenvolvimento Alvaro Pires - UTFPR</h3>
     </div>
   )
 }
