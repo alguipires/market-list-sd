@@ -6,11 +6,26 @@ para este projeto esta sendo utlizado frameworks:
 
 * Next.js
 * Node
-* Hospedagem da aplicação na Vercel
+* Hospedagem da aplicação na Vercel: https://market-list-sd.vercel.app/
 * Orm prisma
 * Banco de dados Postgresql hospedagem no ElephantSQL
-* Prototipos Figma
+* Prototipos Figma: 
 * gerenciador yarn
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
