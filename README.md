@@ -9,9 +9,18 @@ para este projeto esta sendo utlizado frameworks:
 * Hospedagem da aplicação na Vercel: https://market-list-sd.vercel.app/
 * Orm prisma
 * Banco de dados Postgresql hospedagem no ElephantSQL
-* Prototipos Figma: 
+* Prototipos Figma: https://www.figma.com/file/xc701wdi4h0sx9nIqzokTo/prototipo-Market-List?node-id=2%3A13
 * gerenciador yarn
 
+
+
+## Faaes projeto
+
+AA1 - iniciarliar projeto, princcipais telas, e recuperar dados do bd. 19/09/22
+
+AA2 - cadastro de usuario, listas, edição.
+
+AA3 - projeto com todas as telas printas, fazendo edição, cadastro, visualização, rodando no vecel.
 
 
 
