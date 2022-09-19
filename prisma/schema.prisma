@@ -17,14 +17,13 @@ model User {
   name String 
   email String @unique
   Pass_encript String
-  Pass_clean String
   lists List[]
 }
 
 model List {
   id  Int      @id @default(autoincrement())
   title      String
-  produtos_array String
+  product_array String
   user User @relation(fields: [userId], references: [id])
   userId Int
 }

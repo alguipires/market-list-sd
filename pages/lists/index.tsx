@@ -1,22 +1,82 @@
 import { GetStaticProps } from "next";
 
 import { List } from "@prisma/client";
+import { Table, Typography } from "antd";
 import { prisma } from "../../lib/prisma";
+
+import type { ColumnsType } from "antd/es/table";
+
+const { Title, Text, Link } = Typography;
+
+interface ListsProps {
+  lists: Array<List>;
+}
+
+const columns: ColumnsType<List> = [
+  {
+    title: "Id",
+    dataIndex: "id",
+    key: "id",
+  },
+  {
+    title: "Produto",
+    dataIndex: "product_array",
+    key: "product_array",
+  },
+];
+
+export default function Lists({ lists }: ListsProps) {
+  return (
+    <div>
+      <Title level={3}>Listas</Title>
+      <br />
+
+      <Link href="/lists/new">
+        <Text>Create a new Brand</Text>
+      </Link>
+
+      <Table
+        dataSource={lists}
+        columns={columns}
+        rowKey={(record) => record.id.toString()}
+      />
+    </div>
+  );
+}
+
+export const getStaticProps: GetStaticProps = async (context) => {
+  const lists = await prisma.list.findMany();
+
+  return {
+    props: {
+      lists,
+    },
+    revalidate: 10,
+  };
+};
+
+
+/*import { List } from "@prisma/client";
+import { GetStaticProps } from "next";
+import { prisma } from "../../lib/prisma";
+
 import { Divider, Radio, Table } from 'antd';
 import type { ColumnsType } from 'antd/es/table';
 import React, { useState } from 'react';
 
 interface ListsProps {
   key: React.Key;
-  Product: string;
-  Units: number;
-  Sector: string;
+  title: String;
+  productArray: String;
+  units: number;
+  userId: number;
+  sector: string;
 }
 
-const columns: ColumnsType<ListsProps> = [
+const columns: ColumnsType<List> = [
   {
     title: 'Produto',
-    dataIndex: 'product',
+    dataIndex: 'productArray',
     render: (text: string) => <a>{text}</a>,
   },
   {
@@ -32,13 +92,13 @@ const columns: ColumnsType<ListsProps> = [
 const data: ListsProps[] = [
   {
     key: '1',
-    product: 'John Brown',
+    productArray: "John Brown",
     units: 32,
     sector: 'New York No. 1 Lake Park',
   },
   {
     key: '4',
-    product: 'Disabled User',
+    productArray: 'Disabled User',
     units: 99,
     sector: 'Sidney No. 1 Lake Park',
   },
@@ -85,3 +145,4 @@ const App: React.FC = () => {
 };
 
 export default App;
+*/
